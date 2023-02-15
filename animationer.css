@@ -93,6 +93,11 @@
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
+.squash {
+  animation-name: squash;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
 
 @keyframes falling {
   0% {
@@ -228,4 +233,6 @@
   100% {
     transform: translate(30%, 140%) rotate(800deg);
   }
+}
+@keyframes squash {
 }
