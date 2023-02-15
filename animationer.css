@@ -34,6 +34,11 @@
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
+.fade_out {
+  animation-name: fade_out;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
 
 @keyframes falling {
   0% {
@@ -85,5 +90,10 @@
 @keyframes zoom_in {
   100% {
     transform: scale(10);
+  }
+}
+@keyframes fade_out {
+  100% {
+    opacity: 0;
   }
 }
