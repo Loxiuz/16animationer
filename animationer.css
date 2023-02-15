@@ -29,12 +29,16 @@
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
+.zoom_in {
+  animation-name: zoom_in;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
 
 @keyframes falling {
   0% {
     transform: translate(0, -300%);
   }
-
   100% {
     transform: translate(0, 300%);
   }
@@ -43,7 +47,6 @@
   0% {
     transform: translate(0, -140%);
   }
-
   100% {
     transform: translate(0, 140%);
   }
@@ -77,5 +80,10 @@
 @keyframes zoom_out {
   100% {
     transform: scale(0.1);
+  }
+}
+@keyframes zoom_in {
+  100% {
+    transform: scale(10);
   }
 }
