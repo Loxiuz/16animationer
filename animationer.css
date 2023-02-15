@@ -80,6 +80,19 @@
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+.overshoot {
+  animation-name: overshoot;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.35, 0, 0.5, 1.8);
+  animation-fill-mode: forwards;
+}
+.bounce {
+  /* Bolden hopper ikke flydende */
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
 
 @keyframes falling {
   0% {
@@ -176,5 +189,43 @@
 @keyframes pulse {
   100% {
     transform: scale(1.1);
+  }
+}
+@keyframes overshoot {
+  0% {
+    transform: translate(-150%, 0);
+  }
+  100% {
+    transform: translate(155%, 0) rotate(360deg);
+  }
+}
+@keyframes bounce {
+  /* Problemer med værdier*/
+  0% {
+    transform: translate(-140%, -140%);
+  }
+  30% {
+    transform: translate(-140%, 140%) rotate(100deg);
+  }
+  50% {
+    transform: translate(-100%, 0) rotate(200deg);
+  }
+  65% {
+    transform: translate(-60%, 140%) rotate(300deg);
+  }
+  80% {
+    transform: translate(-20%, 70%) rotate(400deg);
+  }
+  90% {
+    transform: translate(20%, 140%) rotate(500deg);
+  }
+  95% {
+    transform: translate(30%, 35%) rotate(600deg);
+  }
+  97.5% {
+    transform: translate(30%, 17.5%) rotate(700deg);
+  }
+  100% {
+    transform: translate(30%, 140%) rotate(800deg);
   }
 }
