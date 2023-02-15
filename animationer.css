@@ -36,7 +36,12 @@
 }
 .fade_out {
   animation-name: fade_out;
-  animation-duration: 1s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.fade_in {
+  animation-name: fade_in;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
 }
 
@@ -95,5 +100,13 @@
 @keyframes fade_out {
   100% {
     opacity: 0;
+  }
+}
+@keyframes fade_in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
   }
 }
