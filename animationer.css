@@ -44,6 +44,12 @@
   animation-duration: 3s;
   animation-fill-mode: forwards;
 }
+.rotation {
+  animation-name: rotation;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
 
 @keyframes falling {
   0% {
@@ -108,5 +114,10 @@
   }
   100% {
     opacity: 100;
+  }
+}
+@keyframes rotation {
+  100% {
+    transform: rotate(360deg);
   }
 }
