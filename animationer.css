@@ -24,6 +24,11 @@
   animation-duration: 2s;
   animation-iteration-count: infinite;
 }
+.zoom_out {
+  animation-name: zoom_out;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
 
 @keyframes falling {
   0% {
@@ -67,5 +72,10 @@
   }
   100% {
     transform: translate(0, 140%);
+  }
+}
+@keyframes zoom_out {
+  100% {
+    transform: scale(0.1);
   }
 }
